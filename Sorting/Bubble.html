@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- Template by quackit.com -->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Bubble Sort</title>
+	<style type="text/css">
+
+		/* Layout */
+		body {
+			min-width: 630px;
+		}
+
+		#container {
+			padding-left: 200px;
+			padding-right: 190px;
+		}
+		
+		#container .column {
+			position: relative;
+			float: left;
+		}
+		
+		#center {
+			padding: 10px 20px;
+			width: 100%;
+		}
+		
+		#left {
+			width: 180px;
+			padding: 0 10px;
+			right: 240px;
+			margin-left: -100%;
+		}
+		
+		#right {
+			width: 130px;
+			padding: 0 10px;
+			margin-right: -100%;
+		}
+		
+		#footer {
+			clear: both;
+		}
+		
+		/* IE hack */
+		* html #left {
+			left: 150px;
+		}
+
+		/* Make the columns the same height as each other */
+		#container {
+			overflow: hidden;
+		}
+
+		#container .column {
+			padding-bottom: 1001em;
+			margin-bottom: -1000em;
+		}
+
+		/* Fix for the footer */
+		* html body {
+			overflow: hidden;
+		}
+		
+		* html #footer-wrapper {
+			float: left;
+			position: relative;
+			width: 100%;
+			padding-bottom: 10010px;
+			margin-bottom: -10000px;
+			background: rgb(255, 255, 255);
+		}
+
+		/* Aesthetics */
+		body {
+			margin: 0;
+			padding: 0;
+			font-family:Sans-serif;
+			line-height: 1.5em;
+		}
+		
+		p {
+			color: #555;
+		}
+
+		nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		nav ul a {
+			color: rgb(83, 0, 100);
+			text-decoration: none;
+		}
+
+		#header, #footer {
+			font-size: large;
+			padding: 0.3em;
+			background: #cc98ce;
+		}
+
+		#left {
+			background: #cc98ce;
+		}
+		
+		#right {
+			background: #cc98ce;
+		}
+
+		#center {
+			background: rgb(255, 255, 255);
+		}
+
+		#container .column {
+			padding-top: 1em;
+		}
+		.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+		
+	</style>
+	
+	<script type="text/javascript">
+		/* =============================
+		This script generates sample text for the body content. 
+		You can remove this script and any reference to it. 
+		 ============================= */
+		
+	</script>	
+</head>
+
+<body>
+
+	<header id="header"><center>Bubble Sort</center></header>
+	<div id="container">
+
+		<main id="center" class="column">
+			
+			<p>Bubble sort is a simple sorting algorithm. This sorting algorithm is comparison-based algorithm in which each pair of adjacent elements is compared and the elements are swapped if they are not in order. This algorithm is not suitable for large data sets as its average and worst case complexity are of Ο(n2) where n is the number of items.</p>
+			<b>How Bubble Sort Works?</b>		
+			<p>We take an unsorted array for our example. Bubble sort takes Ο(n2) time so we're keeping it short and precise.</p>
+			<img src="\image\1.PNG" alt=""  style="height:70px;width:270px;"  border="1" class="center">
+			<p>Bubble sort starts with very first two elements, comparing them to check which one is greater.</p>
+			<img src="\image\2.PNG" alt=""  style="height:70px;width:270px;"  border="1" class="center">	
+			<p>In this case, value 33 is greater than 14, so it is already in sorted locations. Next, we compare 33 with 27.</p>
+			<img src="\image\3.PNG" alt=""  style="height:70px;width:270px;"  border="1" class="center">
+			<p>We find that 27 is smaller than 33 and these two values must be swapped.</p>		
+			<img src="\image\4.PNG" alt=""  style="height:70px;width:270px;"  border="1" class="center">	
+			<p>The new array should look like this −</p>	
+			<img src="\image\5.PNG" alt=""  style="height:70px;width:270px;"  border="1" class="center">	
+			<p>Next we compare 33 and 35. We find that both are in already sorted positions.</p>	
+			<img src="\image\6.PNG" alt=""  style="height:70px;width:270px;"  border="1" class="center">
+			<p>Then we move to the next two values, 35 and 10.</p>
+			<img src="\image\7.PNG" alt=""  style="height:70px;width:270px;"  border="1" class="center">
+			<p>We know then that 10 is smaller 35. Hence they are not sorted.</p>	
+			<img src="\image\8.PNG" alt=""  style="height:70px;width:270px;"  border="1" class="center">	
+			<p>We swap these values. We find that we have reached the end of the array. After one iteration, the array should look like this −</p>
+			<img src="\image\9.PNG" alt=""  style="height:70px;width:270px;"  border="1" class="center">
+			<p>To be precise, we are now showing how an array should look like after each iteration. After the second iteration, it should look like this </p>
+			<img src="\image\10.PNG" alt=""  style="height:70px;width:270px;"  border="1" class="center">
+			<p>Notice that after each iteration, at least one value moves at the end.</p>
+			<img src="\image\11.PNG" alt=""  style="height:70px;width:270px;"  border="1" class="center">
+			<p>And when there's no swap required, bubble sorts learns that an array is completely sorted.</p>
+			<img src="\image\12.PNG" alt=""  style="height:70px;width:270px;"  border="1" class="center">
+			<p>Now we should look into some practical aspects of bubble sort.</p>
+		</br>
+			<b>Algorithm</b>
+			<p>
+			</br>	begin BubbleSort(list) </br>
+
+   for all elements of list</br>
+      if list[i] > list[i+1]</br>
+         swap(list[i], list[i+1])</br>
+      end if</br>
+   end for</br>
+   
+   return list</br>
+   
+end BubbleSort</br>
+			</p>
+		</main>
+</body>
+
+</html>

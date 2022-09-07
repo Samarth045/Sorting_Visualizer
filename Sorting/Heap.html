@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!-- Template by quackit.com -->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Heap Sort</title>
+	<style type="text/css">
+
+		/* Layout */
+		body {
+			min-width: 630px;
+		}
+
+		#container {
+			padding-left: 200px;
+			padding-right: 190px;
+		}
+		
+		#container .column {
+			position: relative;
+			float: left;
+		}
+		
+		#center {
+			padding: 10px 20px;
+			width: 100%;
+		}
+		
+		#left {
+			width: 180px;
+			padding: 0 10px;
+			right: 240px;
+			margin-left: -100%;
+		}
+		
+		#right {
+			width: 130px;
+			padding: 0 10px;
+			margin-right: -100%;
+		}
+		
+		#footer {
+			clear: both;
+		}
+		
+		/* IE hack */
+		* html #left {
+			left: 150px;
+		}
+
+		/* Make the columns the same height as each other */
+		#container {
+			overflow: hidden;
+		}
+
+		#container .column {
+			padding-bottom: 1001em;
+			margin-bottom: -1000em;
+		}
+
+		/* Fix for the footer */
+		* html body {
+			overflow: hidden;
+		}
+		
+		* html #footer-wrapper {
+			float: left;
+			position: relative;
+			width: 100%;
+			padding-bottom: 10010px;
+			margin-bottom: -10000px;
+			background: rgb(255, 255, 255);
+		}
+
+		/* Aesthetics */
+		body {
+			margin: 0;
+			padding: 0;
+			font-family:Sans-serif;
+			line-height: 1.5em;
+		}
+		
+		p {
+			color: #555;
+		}
+
+		nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		nav ul a {
+			color: rgb(83, 0, 100);
+			text-decoration: none;
+		}
+
+		#header, #footer {
+			font-size: large;
+			padding: 0.3em;
+			background: #cc98ce;
+		}
+
+		#left {
+			background: #cc98ce;
+		}
+		
+		#right {
+			background: #cc98ce;
+		}
+
+		#center {
+			background: rgb(255, 255, 255);
+		}
+
+		#container .column {
+			padding-top: 1em;
+		}
+		.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+		
+	</style>
+	
+	<script type="text/javascript">
+		/* =============================
+		This script generates sample text for the body content. 
+		You can remove this script and any reference to it. 
+		 ============================= */
+		
+	</script>	
+</head>
+
+<body>
+
+	<header id="header"><center>Heap Sort</center></header>
+	<div id="container">
+
+		<main id="center" class="column">
+		</br>
+	</br>
+			<p>Heap sort is performed on the heap data structure. We know that heap is a complete binary tree. Heap tree can be of two types. Min-heap or max heap. For min heap the root element is minimum and for max heap the root is maximum. After forming a heap, we can delete an element from the root and send the last element to the root. After these swapping procedure, we need to re-heap the whole array. By deleting elements from root we can sort the whole array.</p>
+		</br>
+	</br>
+			<b>The complexity of Heap Sort Technique</b>		
+</br>
+</br>
+			<b>1) Time Complexity:</b><p>O(n log n</p>
+			<b>2) Space Complexity:</b><p>O(1)</p>
+</br>
+</br>
+			<b>Algorithm</b>
+			<p>heapify(array, size)</p>
+			<p>Input − An array of data, and the total number in the array</p>
+			<p>Output − The max heap using an array element</p>
+			<p>
+			</br>	Begin</br>
+   for i := 1 to size do</br>
+      node := i </br>
+      par := floor (node / 2) </br>
+      while par >= 1 do </br>
+         if array[par] < array[node] then </br>
+            swap array[par] with array[node]</br>
+         node := par</br>
+         par := floor (node / 2)</br>
+      done</br>
+   done</br>
+End</br>
+			</p>
+
+
+
+		</main>
+</body>
+
+</html>

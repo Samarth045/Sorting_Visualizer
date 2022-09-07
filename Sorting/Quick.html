@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<!-- Template by quackit.com -->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Quick  Sort</title>
+	<style type="text/css">
+
+		/* Layout */
+		body {
+			min-width: 630px;
+		}
+
+		#container {
+			padding-left: 200px;
+			padding-right: 190px;
+		}
+		
+		#container .column {
+			position: relative;
+			float: left;
+		}
+		
+		#center {
+			padding: 10px 20px;
+			width: 100%;
+		}
+		
+		#left {
+			width: 180px;
+			padding: 0 10px;
+			right: 240px;
+			margin-left: -100%;
+		}
+		
+		#right {
+			width: 130px;
+			padding: 0 10px;
+			margin-right: -100%;
+		}
+		
+		#footer {
+			clear: both;
+		}
+		
+		/* IE hack */
+		* html #left {
+			left: 150px;
+		}
+
+		/* Make the columns the same height as each other */
+		#container {
+			overflow: hidden;
+		}
+
+		#container .column {
+			padding-bottom: 1001em;
+			margin-bottom: -1000em;
+		}
+
+		/* Fix for the footer */
+		* html body {
+			overflow: hidden;
+		}
+		
+		* html #footer-wrapper {
+			float: left;
+			position: relative;
+			width: 100%;
+			padding-bottom: 10010px;
+			margin-bottom: -10000px;
+			background: rgb(255, 255, 255);
+		}
+
+		/* Aesthetics */
+		body {
+			margin: 0;
+			padding: 0;
+			font-family:Sans-serif;
+			line-height: 1.5em;
+		}
+		
+		p {
+			color: #555;
+		}
+
+		nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		nav ul a {
+			color: rgb(83, 0, 100);
+			text-decoration: none;
+		}
+
+		#header, #footer {
+			font-size: large;
+			padding: 0.3em;
+			background: #cc98ce;
+		}
+
+		#left {
+			background: #cc98ce;
+		}
+		
+		#right {
+			background: #cc98ce;
+		}
+
+		#center {
+			background: rgb(255, 255, 255);
+		}
+
+		#container .column {
+			padding-top: 1em;
+		}
+		.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+		
+	</style>
+	
+	<script type="text/javascript">
+		/* =============================
+		This script generates sample text for the body content. 
+		You can remove this script and any reference to it. 
+		 ============================= */
+		
+	</script>	
+</head>
+
+<body>
+
+	<header id="header"><center>Quick  Sort</center></header>
+	<div id="container">
+
+		<main id="center" class="column">
+			
+			<p>Quick sort is a highly efficient sorting algorithm and is based on partitioning of array of data into smaller arrays. A large array is partitioned into two arrays one of which holds values smaller than the specified value, say pivot, based on which the partition is made and another array holds values greater than the pivot value.</p>
+			<p>Quicksort partitions an array and then calls itself recursively twice to sort the two resulting subarrays. This algorithm is quite efficient for large-sized data sets as its average and worst-case complexity are O(n2), respectively.</p>
+         <b>Algorithm</b>		
+      </br>
+      <p>Based on our understanding of partitioning in quick sort, we will now try to write an algorithm for it, which is as follows.</p>
+      <p>
+      </br>
+      <p>
+         Step 1 − Choose the highest index value has pivot </br>
+         Step 2 − Take two variables to point left and right of the list excluding pivot </br>
+         Step 3 − left points to the low index </br>
+         Step 4 − right points to the high </br>
+         Step 5 − while value at left is less than pivot move right </br>
+         Step 6 − while value at right is greater than pivot move left </br>
+         Step 7 − if both step 5 and step 6 does not match swap left and right </br>
+         Step 8 − if left ≥ right, the point where they met is new pivot </br>
+      </p>
+		</main>
+</body>
+
+</html>
